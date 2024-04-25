@@ -1,0 +1,303 @@
+@import "~@fortawesome/fontawesome-free/css/all.css";
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Header styles */
+  .header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10; /* Ensures header is above other content */
+  }
+  
+  /* Main content styles, including sidebars */
+  .main-content {
+    display: flex;
+    flex-grow: 1;
+    /* margin-top: 60px; */
+    width: 100%;
+  }
+  
+  .sidebar{
+    width: 250px; 
+    flex-shrink: 0; 
+    height: calc(100vh - 60px); 
+    overflow-y: auto; 
+  }
+
+  .right-sidebar {
+    margin-top: 94px;
+    padding-top: 100px;
+    background-color: #f3f3f3;
+    flex-shrink: 0;
+    overflow-y: auto;
+    position: fixed;
+    top: 60px; 
+    right: 0; 
+  }
+  
+  /* Left sidebar styles */
+  .sidebar {
+    flex: 0 0 250px;
+    /* Your existing sidebar styles */
+  }
+  
+  /* Main panel styles */
+  .main-panel {
+    flex-grow: 1; 
+    overflow-y: auto;
+  }
+  .modal {
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 1000px;
+    height: 500px;
+    /* overflow-y: hidden; */
+  }
+
+  .modal-header {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+
+  .modal-content {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 6px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .form-group input[type="date"],
+  .form-group select,
+  .form-group input[type="text"],
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .form-group input[type="date"]{
+    width: 97%;
+  }
+
+  .form-group textarea {
+    resize: none;
+  }
+
+  .btn-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+
+  .btn-primary {
+    background-color: #5cb85c;
+    color: white;
+  }
+
+  .btn-default {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+
+  .btn-info {
+    background-color: #5bc0de;
+    color: white;
+  }
+
+  .close {
+    float: right;
+    cursor: pointer;
+  }
+
+  .button-row {
+    display: flex;
+    /* background-color: #0077cc; */
+    justify-content: space-between;
+    /* justify-content: center; */
+    align-items: center;
+  }
+
+  
+  .input-row {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .input-row > * {
+    border: 1px solid #cccccc;
+    padding: 10px;
+    border-radius: 4px;
+    outline: none;
+  }
+  .input-row input[type="text"],
+  .input-row select {
+    flex-grow: 1;
+  }
+  .input-row button {
+    background: #f4f4f4;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+  }
+  .input-row button .search-icon {
+    /* background-image: url('search-icon.png');  */
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+    margin-right: 8px;
+  }
+  /* Placeholder adjustments */
+  ::placeholder {
+    color: #a9a9a9;
+    opacity: 1;
+  }
+  :-ms-input-placeholder {
+    color: #a9a9a9;
+  }
+  ::-ms-input-placeholder {
+    color: #a9a9a9;
+  }
+  
+
+  .container {
+    display: flex;
+    width: 100%;
+    gap: 16px;
+  }
+  
+  .left-column {
+    flex: 2;
+  }
+  
+  .right-column {
+    display: flex;
+    flex-direction: column;
+    width: 40%; /* Adjust the width as needed */
+    height: 150px;
+  }
+  
+  .form-field {
+    margin-bottom: 1em;
+  }
+  
+  .form-field label {
+    display: block;
+    margin-bottom: .5em;
+  }
+  
+  .form-field input,
+  .form-field select {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .toggle-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .toggle-container span {
+    margin-right: 1em;
+  }
+  
+  /* Styling for the custom toggle/switch */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
